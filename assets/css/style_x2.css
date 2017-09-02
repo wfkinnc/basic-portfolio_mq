@@ -10,24 +10,40 @@ background-image: url("../images/concrete-texture/concrete-texture/concrete-text
 	color: #777;
 }
 
+ /* For mobile phones: */
+[class*="col-"] {
+    width: 100%;
+    background: blue;
+    border: 1px solid red;
+}   
+
+@media only screen and (min-width: 768px) {
+    /* For desktop: */
+    .col-1 {width: 8.33%;    background: red;}
+    .col-2 {width: 16.66%;}
+    .col-3 {width: 25%; background: purple}
+    .col-4 {width: 33.33%;}
+    .col-5 {width: 41.66%;}
+    .col-6 {width: 50%;}
+    .col-7 {width: 58.33%;}
+    .col-8 {width: 66.66%;}
+    .col-9 {width: 75%;}
+    .col-10 {width: 83.33%;}
+    .col-11 {width: 91.66%;}
+    .col-12 {width: 100%;}
+}
+	
 .container {
 
-	/*width: 100%;*/
+	width: 100%;
 	max-width: 960px;
 	margin: 0 auto;
 	clear: both;
 }
-
-
-
 /* general */
 h1, h2, h3, p{
 
 	margin-bottom; 20px
-}
-
-#main-container{
-	padding-top: 130px;
 }
 
 p:last-child{
@@ -50,7 +66,7 @@ h2, h3 {
 }
 
 /* header info */
-#mainHead{
+.mainHead{
 
 	background: #fff;
 	margin: 0 0 30px;
@@ -63,9 +79,9 @@ h2, h3 {
 
 }
 
-#mainLogo{
+.mainLogo{
 
-	/*width: 250px;*/
+	width: 250px;
 	height: 90px;
 	background: #4aaaa5;
 	float: left;
@@ -102,22 +118,26 @@ nav a:first-child{
 }
 .contact{
 
-	padding: 20px;
+	padding: 80px;
 }
+#main-container{
 
+	padding-top: 130px;
+}
 
 .main-section{
 
 	background: #fff;
 	padding: 30px;
 	margin: 0 0 40px 0;
+	width: 100%;
 	max-width: 650px;
 	float: left;
 	border: 1px solid #ddd;
 }
 
 .auth-image{
-	width: 250px;
+	width: 200px;
 	height: auto;
 	margin-top: 10px;
 	float: left;
@@ -128,11 +148,11 @@ nav a:first-child{
 
 	background: #fff;
 	padding: 30px;
+	width: 100%;
 	max-width: 370px;
 	float: right;
 	border: 1px solid #ddd;
 	margin-bottom: 20px;
-
 }
 
 h3, .sidebar, h2{
@@ -237,48 +257,4 @@ input[type=submit]{
 	font-size: 18px;
 	padding:10px 30px;
 	cursor: pointer;
-}
- /* For mobile phones: */
-[class*="col-"] {
-    width: 100%;
- }
-
- @media only screen and (min-width: 768px) {
-    /* For desktop: */
-    .col-1 {width: 8.33%;}
-    .col-2 {width: 16.66%;}
-    .col-3 {width: 25%;}
-    .col-4 {width: 33.33%;}
-    .col-5 {width: 41.66%;}
-    .col-6 {width: 50%;}
-    .col-7 {width: 58.33%;}
-    .col-8 {width: 66.66%;}
-    .col-9 {width: 75%;}
-    .col-10 {width: 83.33%;}
-    .col-11 {width: 91.66%;}
-    .col-12 {width: 100%;}
-
- 
-	
-	.contact{
-		padding: 80px;
-	}
-
-	.auth-image{
-		width: 200px;
-		height: auto;
-		margin-top: 10px;
-		float: left;
-		margin-right: 25px;
-	}
-
-	.main-section{
-
-		background: #fff;
-		padding: 30px;
-		margin: 0 0 40px 75px;
-		max-width: 650px;
-		float: left;
-		border: 1px solid #ddd;
-	}
 }
